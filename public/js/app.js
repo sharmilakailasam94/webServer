@@ -26,12 +26,12 @@ weatherForm.addEventListener('submit',(e)=>{
       response.json().then((data)=>{
           if(data.error)
           {
-            console.log(data.error)
+            //console.log(data.error) display in browser's console
             messageOne.textContent=data.error
           }
           else{
-              console.log(data.location)
-              console.log(data.forecast)
+              //console.log(data.location) display in browser's console
+              //console.log(data.forecast) display in browser's console
               messageOne.textContent=data.location
               messageTwo.textContent=data.forecast
           }

@@ -2,7 +2,7 @@ const request=require('request')
 const forecast=(latt,long,callback)=>
 {
 
-    const url='http://api.weatherstack.com/current?access_key=ef315ffada29fae916ee613563147efb&query='+latt+','+long+'&units=f'
+    const url='http://api.weatherstack.com/current?access_key=a481b46b717b498e6b52998a7a077dd5&query='+latt+','+long+'&units=f'
 request({url,json:true},(error,{body}={})=>
 {
     if(error)
@@ -25,7 +25,7 @@ request({url,json:true},(error,{body}={})=>
             feelslike:body.current.feelslike
         }
         callback(undefined,data) */
-         callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+ ' degrees out')
+         callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+ ' degrees out, There is '+body.current.precip+'% chance for rain.')
          }
 
 })
