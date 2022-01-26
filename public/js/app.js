@@ -1,4 +1,4 @@
-console.log('client side JavaScript file is lo')
+
 /*   fetch('http://puzzle.mead.io/puzzle').then((response)=>{
  response.json().then((data)=>
 {
