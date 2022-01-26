@@ -4,9 +4,12 @@ const geocode=require('./utility/geocode')
 const express=require('express')
 const hbs=require('hbs')
 const app=express()  
+const port=process.env.PORT || 3000
+
 const publicDirectoryPath=path.join(__dirname,'../public') 
 const viewsPath=path.join(__dirname, '../template/views')
 const partialsPath=path.join(__dirname,'../template/partials')
+
 app.set('view engine','hbs') 
 app.set('views',viewsPath ) 
 hbs.registerPartials(partialsPath)
@@ -83,7 +86,7 @@ err:'404 Page not found!',
 name:'sharmila'})
 })
  
-app.listen(3000,()=>
+app.listen(port, ()=>
 {
-    console.log('server is up on port 3000.')
+    console.log('server is up on port '+port)
 })       
