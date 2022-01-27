@@ -25,7 +25,13 @@ request({url,json:true},(error,{body}={})=>
             feelslike:body.current.feelslike
         }
         callback(undefined,data) */
-         callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+ ' degrees out, There is '+body.current.precip+'% chance for rain.')
+        let day
+        if (body.current.is_day==="no")
+        {day='Day'}
+        else{
+            day='Night'
+        }
+         callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+ ' degrees out, There is '+body.current.precip+'% chance for rain. The humidity is '+body.current.humidity+' and its is '+day+' here.')
          }
 
 })
