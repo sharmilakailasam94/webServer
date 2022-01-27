@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node src/app-endpoint.js"
+    "start": "node src/app-endpoint.js",
+    "dev": "nodemon src/app-endpoint.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,8 @@
     "express": "^5.0.0-alpha.8",
     "hbs": "^4.2.0",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
