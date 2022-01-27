@@ -11,7 +11,7 @@ const geocode=(address,callback)=>
         }
         else if(body.features.length==0)
         {
-            callback('unable to find location,try another search',undefined)
+            callback('unable to find location,try another valid location',undefined)
         }
         else{
         const data={    
